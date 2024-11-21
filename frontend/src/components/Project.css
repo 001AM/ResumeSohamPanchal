@@ -1,0 +1,22 @@
+.projects {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: #fff;
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
