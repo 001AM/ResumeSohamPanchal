@@ -1,39 +1,38 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import "./Project.css";
-import ProjectCard from "./ProjectCard";
+import React from "react";
 
-const Projects = () => {
-  const [repositories, setRepositories] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Fetch the repositories dynamically
-    axios
-      .get("https://api.github.com/users/001AM/repos")
-      .then((response) => {
-        setRepositories(response.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching data from GitHub:", error);
-        setLoading(false);
-      });
-  }, []);
-  if (loading) {
-    return <div className="loading">Loading...</div>;
-  }
-
+const Home = () => {
   return (
-    <section className="projects">
-      <h2>My Projects</h2>
-      <div className="projects-grid">
-        {repositories.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+    <div className="Home bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+      {/* Centered Name */}
+      <div className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold text-gray-800">
+        SOHAM PANCHAL
       </div>
-    </section>
+
+      {/* Bottom Right Navigation */}
+      <ul className="absolute bottom-4 right-4 p-4 text-right font-bold space-y-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+        <li className="group">
+          ABOUT ME
+          <span className="hidden group-hover:inline-block ml-2">&lt;|</span>
+        </li>
+        <li className="group">
+          TECH STACK
+          <span className="hidden group-hover:inline-block ml-2">&lt;|</span>
+        </li>
+        <li className="group">
+          PROJECT
+          <span className="hidden group-hover:inline-block ml-2">&lt;|</span>
+        </li>
+        <li className="group">
+          MEDIUM STORIES
+          <span className="hidden group-hover:inline-block ml-2">&lt;|</span>
+        </li>
+        <li className="group">
+          MY PLAYLIST
+          <span className="hidden group-hover:inline-block ml-2">&lt;|</span>
+        </li>
+      </ul>
+    </div>
   );
 };
 
-export default Projects;
+export default Home;

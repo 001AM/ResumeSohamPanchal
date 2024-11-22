@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Us
 // import Header from "./components/Header";
 import About from "./components/About";
 import Projects from "./components/Project";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
+import Home from "./pages/Home";
 import "./App.css"; // Add your global styles here
 import "./index.css"; // Replace with your CSS file if named differently
 
@@ -12,7 +13,14 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<></>} />
+          <Route
+            path="/ResumeSohamPanchal"
+            element={
+              <>
+                <Home />
+              </>
+            }
+          />
           {/* Define routes for different sections of your app */}
           <Route
             path="/home"
@@ -35,7 +43,7 @@ function App() {
           {/* For example, a route for an individual project page */}
           {/* <Route path="/project/:id" element={<ProjectDetail />} /> */}
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );
