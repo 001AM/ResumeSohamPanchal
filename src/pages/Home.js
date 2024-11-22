@@ -1,11 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div className="Home bg-gray-100 min-h-screen flex flex-col items-center justify-center">
       {/* Centered Name */}
-      <div className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold text-gray-800">
-        SOHAM PANCHAL
+      <div className="mb-8">
+        <div className="flex flex-col">
+          <div className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold text-gray-800">
+            SOHAM PANCHAL
+          </div>
+
+          <div className="text-2xl sm:text-1xl md:text-2xl lg:text-4xl font-extrabold text-gray-800">
+            sohampanchal1469@gmail.com
+          </div>
+          <div className="text-2xl sm:text-1xl md:text-2xl lg:text-4xl font-extrabold text-gray-800">
+            Computer Engineer
+          </div>
+        </div>
       </div>
 
       {/* Bottom Right Navigation */}
@@ -15,7 +27,11 @@ const Home = () => {
           <span className="hidden group-hover:inline-block ml-2">&lt;|</span>
         </li>
         <li className="group">
-          TECH STACK
+          <Link to="/ResumeSohamPanchal/tech-skills/">TECH STACK</Link>
+          <span className="hidden group-hover:inline-block ml-2">&lt;|</span>
+        </li>
+        <li className="group">
+          EXPERIENCE
           <span className="hidden group-hover:inline-block ml-2">&lt;|</span>
         </li>
         <li className="group">
@@ -23,11 +39,13 @@ const Home = () => {
           <span className="hidden group-hover:inline-block ml-2">&lt;|</span>
         </li>
         <li className="group">
-          MEDIUM STORIES
+          <Link to="https://medium.com/@sohampanchal1469">MEDIUM STORIES</Link>
           <span className="hidden group-hover:inline-block ml-2">&lt;|</span>
         </li>
         <li className="group">
-          MY PLAYLIST
+          <Link to="https://music.apple.com/profile/soham_panchal?ls">
+            MY PLAYLIST
+          </Link>
           <span className="hidden group-hover:inline-block ml-2">&lt;|</span>
         </li>
       </ul>

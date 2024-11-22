@@ -54,3 +54,93 @@ ul {
 .project-forks {
     margin-left: 10px;
 }
+/* Browser Window Styles */
+.browser-window {
+    position: relative;
+    width: 90vw;
+    max-width: 1200px;
+    height: 80vh;
+    border-radius: 20px;
+    border: 1px solid #d1d1d6;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: auto;
+    animation: browser-load 1.5s ease-in-out;
+}
+
+.address-bar {
+    height: 35px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #d1d1d6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.window-content {
+    padding: 20px;
+    height: calc(100% - 35px);
+    overflow-y: auto;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-input:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.3);
+}
+
+/* Browser Window Animation */
+@keyframes browser-load {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* TechCard Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.TechCard {
+    animation: tech-card-fade 1s ease-in-out;
+}
+
+@keyframes tech-card-fade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

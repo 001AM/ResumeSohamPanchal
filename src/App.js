@@ -7,6 +7,8 @@ import Projects from "./components/Project";
 import Home from "./pages/Home";
 import "./App.css"; // Add your global styles here
 import "./index.css"; // Replace with your CSS file if named differently
+import TechStack from "./pages/TechStack";
+import TechNew from "./pages/TechNew";
 
 function App() {
   return (
@@ -21,9 +23,17 @@ function App() {
               </>
             }
           />
+          <Route
+            path="/ResumeSohamPanchal/tech-skills"
+            element={
+              <>
+                <TechStack />
+              </>
+            }
+          />
           {/* Define routes for different sections of your app */}
           <Route
-            path="/home"
+            path="/ResumeSohamPanchal/home"
             element={
               <>
                 <About />
@@ -31,11 +41,19 @@ function App() {
             }
           />
           <Route
-            path="/project"
+            path="/ResumeSohamPanchal/project"
             element={
               <>
                 <About />
                 <Projects />
+              </>
+            }
+          />
+          <Route
+            path="/ResumeSohamPanchal/tech-skills-new"
+            element={
+              <>
+                <TechNew />
               </>
             }
           />
